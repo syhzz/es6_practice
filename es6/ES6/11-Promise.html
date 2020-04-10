@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-09 15:36:23
+ * @LastEditTime: 2020-04-09 15:36:24
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vscode_workplace\es6\ES6\11-Promise.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        let promise1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log('Timeout...')
+                resolve()
+            }, 3000)
+        })
+
+
+
+        promise1.then(() => {
+            return new Promise((resolve, reject) => {
+                $.get('user.json', data => {
+                    console.log(data)
+                    resolve(data)
+                })
+            })
+
+        }).then(data => {
+            $.get(`login.json`, data => {
+                console.log(data)
+            })
+        })
+
+    </script>
+</body>
+
+</html>

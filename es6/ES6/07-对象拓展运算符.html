@@ -1,0 +1,35 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-09 15:08:57
+ * @LastEditTime: 2020-04-09 15:20:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vscode_workplace\es6\ES6\07-对象拓展运算符.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = 'zhangsan'
+        let age = 33
+        let user = { name, age }
+        let someone = { ...user }
+        console.log(user)
+        console.log(someone)
+        //有重复的字段,后面的覆盖前面字段
+        let name1 = { name: 'zhang3', age: 33 }
+        let name2 = { name: 'lisi', age: 44 }
+        let someone2 = { ...name1, ...name2 }
+        console.log(someone2)
+    </script>
+</body>
+
+</html>

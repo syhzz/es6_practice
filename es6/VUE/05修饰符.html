@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="vue.min.js"></script>
+    <div id="app">
+        <!-- 修饰符.prevent阻止事件的默认行为 -->
+        <form action="" v-on:submit.prevent="do_submit()">
+            <!-- 点击label，label中的input自动获得焦点 ,当input在外面的时候，在label属性for中填写input的ID也可以使input获取焦点-->
+            <label for="name">
+                姓名:
+            </label>
+            <input id="name" type="text" v-model="user.name">
+            <button type="submit">提交</button>
+        </form>
+
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                user: {
+
+                }
+            },
+            methods: {
+                do_submit() {
+                    console.log(user.name)
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

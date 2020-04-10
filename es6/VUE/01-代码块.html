@@ -1,0 +1,38 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-09 20: 45: 13
+ * @LastEditTime: 2020-04-09 21:26:44
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vscode_workplace\es6\VUE\00-demo.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="vue.min.js"></script>
+    <div id="app">
+        <!-- v-bind 把普通属性绑定到可被渲染的属性 -->
+        <h1 v-bind:title="title">{{message}}</h1>
+
+    </div>
+
+    <script>
+        let app = new new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!!',
+                title: "你好"
+            }
+        })
+    </script>
+
+</body>
+
+</html>

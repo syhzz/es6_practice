@@ -1,0 +1,41 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-09 15:00:32
+ * @LastEditTime: 2020-04-09 15:09:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vscode_workplace\es6\ES6\05-声明对象简写.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = 'zhangsan'
+        let age = 33
+        let user = { name, age }
+        console.log(user)
+        let admin = {
+            name: 'zhang3', age: 33, hello: function () {
+                console.log('Hello,how are you')
+            }
+        }
+
+        console.log(admin.hello)
+        let admin2 = {
+            name: 'zhang3', age: 33, hello() {
+                console.log('Hello,how are you')
+            }
+        }
+        console.log(admin2.hello)
+    </script>
+</body>
+
+</html>

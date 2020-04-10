@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-09 15:20:44
+ * @LastEditTime: 2020-04-09 15:28:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vscode_workplace\es6\ES6\08-默认参数.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //默认参数,只有当参数为undefined时才会使用默认参数，null不会
+        function getUser(name = '888', age = 18) {
+            console.log(name, age)
+        }
+        getUser('zhangsan', 18)
+        getUser('lisi')
+        getUser(undefined, 28)
+        getUser(null, 20)
+
+        function f(...values) {
+            console.log(values.length)
+            console.log(values)
+        }
+
+        f(1, 2, 3, 4, 5, 6, 7, 8)
+    </script>
+</body>
+
+</html>

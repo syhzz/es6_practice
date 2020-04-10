@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-09 20: 45: 13
+ * @LastEditTime: 2020-04-10 14:37:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vscode_workplace\es6\VUE\00-demo.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="vue.min.js"></script>
+    <div id="app">
+
+        <label>搜索: <input type="text" v-bind:value="search.keyword"></label>
+        <label>搜索: <input type="text" v-model="search.keyword"></label>
+        <p>{{search.keyword}} </p>
+        <!-- <button><button v-on:click="search_info()">搜素</button></p> -->
+        <button @click="search_info()">搜素</button>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!!',
+                search: {
+                    keyword: 'happy new year!!!'
+                }
+            },
+            methods: {
+                search_info() {
+                    console.log('search_for_info.....')
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
